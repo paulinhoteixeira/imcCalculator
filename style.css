@@ -49,7 +49,7 @@ fieldset {
 
 label {
   display: flex;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
   color: hsla(170, 100%, 14%, 1);
   font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
@@ -66,6 +66,12 @@ input {
   border: 1px solid hsla(210, 9%, 31%, 0.5);
   outline: none;
   width: 100%;
+
+  color: hsla(210, 11%, 15%, 1);
+  font-family: Roboto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
 }
 
 input:first-of-type {
@@ -82,20 +88,20 @@ input::placeholder {
   color: hsla(210, 9%, 31%, 0.5);
 }
 
-input:focus{
+input:focus {
   border: 1px solid hsla(194, 97%, 31%, 1);
-
 }
 
 button {
   display: flex;
   padding: 1.6rem;
   justify-content: center;
+  align-items: center;
   margin-top: 3.2rem;
 
   background: hsla(194, 97%, 31%, 1);
   border: none;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
@@ -103,4 +109,10 @@ button {
   font-weight: 700;
   line-height: 2rem;
   color: #fff;
+}
+
+#arrow {
+  margin-left: 0.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
