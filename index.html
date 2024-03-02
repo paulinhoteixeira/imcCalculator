@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cálculo de IMC</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculo de IMC</title>
 
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <main>
-    <h1>Cálculo de IMC</h1>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Cálculo de IMC</h1>
 
-    <form action="">
-      <fieldset>
-        <label for="weight">Peso (kg)</label>
-        <input type="number" id="weight">
-        <label for="height">Altura (m)</label>
-        <input type="number" id="height">
-      </fieldset>
-    </form>
-    <button>Calcular IMC</button>
-  </main>
-  
-</body>
+      <form action="">
+        <fieldset>
+          <label for="weight">Peso (kg)</label>
+          <input type="number" id="weight" placeholder="60" />
+          <label for="height">Altura (m)</label>
+          <input type="number" id="height" placeholder="168" />
+        </fieldset>
+      </form>
+      <button>
+        Calcular IMC
+        <svg
+          width="17"
+          height="16"
+          viewBox="0 0 17 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          id="arrow"
+        >
+          <path
+            d="M3.1685 8.26205L14.3589 8.26213M14.3589 8.26213L9.64488 3.54808M14.3589 8.26213L9.64488 12.9762"
+            stroke="white"
+            stroke-width="1.20972"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </main>
+  </body>
 </html>
