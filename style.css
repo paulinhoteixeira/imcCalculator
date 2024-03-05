@@ -34,6 +34,7 @@ h1 {
   font-style: normal;
   color: #0c3440;
   font-size: 3.2rem;
+  line-height: 4rem;
 
   margin-bottom: 3.2rem;
 }
@@ -115,4 +116,38 @@ button {
   margin-left: 0.8rem;
   width: 1.6rem;
   height: 1.6rem;
+}
+
+
+.modal{
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0,0,0,0.70);
+}
+
+.content{
+  padding: 4.8rem 6.4rem 6.4rem;
+  border-radius: .6rem;
+  background: #FFF;
+  box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.10);
+  
+  position: relative;
+}
+
+.content h1{
+  margin: 0;
+}
+
+#closeButton{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.hide {
+  opacity: 0;
 }
