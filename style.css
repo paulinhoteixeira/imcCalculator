@@ -155,11 +155,21 @@ button:hover {
   position: absolute;
   top: 16px;
   right: 16px;
+
+  cursor: pointer;
+
+  transition: transform 0.3s;
+}
+
+#closeButton:hover {
+  transform: scale(1.1);
 }
 
 .modal.hide,
 .screen-error.hide {
   display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .screen-error {
@@ -180,4 +190,5 @@ button:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 2rem;
+
 }
