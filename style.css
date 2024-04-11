@@ -128,7 +128,7 @@ button:hover {
   height: 1.6rem;
 }
 
-.modal {
+.modal-wrapper {
   display: grid;
   place-items: center;
   z-index: 1;
@@ -165,7 +165,7 @@ button:hover {
   transform: scale(1.1);
 }
 
-.modal.hide,
+.modal-wrapper.hide,
 .screen-error.hide {
   display: none;
   visibility: hidden;
