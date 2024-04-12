@@ -1,23 +1,12 @@
+import { Modal } from './modal.js'
+
 const calculatorButton = document.querySelector("button")
 const inputWeight = document.querySelector("#weight")
 const inputHeight = document.querySelector("#height")
 const screenError = document.querySelector(".screen-error")
 
-const Modal ={
-  wrapper: document.querySelector(".modal-wrapper"),
-  textResult: document.querySelector(".content h1"),
-  buttonClose: document.querySelector("#closeButton"),
-
-  open(){
-    Modal.wrapper.classList.remove("hide")    
-  },
-  close(){
-    Modal.wrapper.classList.add("hide")
-  }
-}
 
 calculatorButton.addEventListener("click", calculate)
-Modal.buttonClose.addEventListener("click", closeResult)
 
 
 
@@ -41,7 +30,7 @@ function showResult(result) {
   Modal.textResult.innerText = `Seu IMC é de ${result}`
 }
 
-function closeResult() {
+export function closeResult() {
   Modal.close()
   removeMessageError()
   inputWeight.value = ""
