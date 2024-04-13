@@ -14,14 +14,14 @@ function calculate() {
   let weight = Number(inputWeight.value)
   let height = Number(inputHeight.value/100)
 
-  let result = Number((weight / (height* height)).toFixed(2))
-
-  if(isNumber(result)){
+  if(isNumber(weight) && isNumber(height)) {
+    let result = Number((weight / (height* height)).toFixed(2))
     removeMessageError()
     showResult(result)
   }else{
     showMessageError()
-  }
+
+  } 
     
 }
 
@@ -37,8 +37,8 @@ export function closeResult() {
   inputHeight.value = ""
 }
 
-function isNumber(result) {
-  return typeof result === 'number' && !Number.isNaN(result)
+function isNumber(value) {
+  return !isNaN(value) && value != "" 
 }
 
 function showMessageError(){
