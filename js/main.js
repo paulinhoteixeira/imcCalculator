@@ -1,9 +1,9 @@
 import { Modal } from './modal.js'
+import { AlertError } from './alert-error.js'
 
 const calculatorButton = document.querySelector("button")
 const inputWeight = document.querySelector("#weight")
 const inputHeight = document.querySelector("#height")
-const screenError = document.querySelector(".screen-error")
 
 
 calculatorButton.addEventListener("click", calculate)
@@ -16,10 +16,11 @@ function calculate() {
 
   if(isNumber(weight) && isNumber(height)) {
     let result = Number((weight / (height* height)).toFixed(2))
-    removeMessageError()
+    AlertError.close()
     showResult(result)
   }else{
-    showMessageError()
+    AlertError.open()
+
 
   } 
     
@@ -32,7 +33,7 @@ function showResult(result) {
 
 export function closeResult() {
   Modal.close()
-  removeMessageError()
+  AlertError.close()
   inputWeight.value = ""
   inputHeight.value = ""
 }
@@ -41,10 +42,3 @@ function isNumber(value) {
   return !isNaN(value) && value != "" 
 }
 
-function showMessageError(){
-  screenError.classList.remove("hide")
-}
-
-function removeMessageError(){
-  screenError.classList.add("hide")
-}
