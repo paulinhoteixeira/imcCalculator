@@ -7,6 +7,9 @@ const inputWeight = document.querySelector("#weight")
 const inputHeight = document.querySelector("#height")
 
 calculatorButton.addEventListener("click", calculate)
+inputWeight.oninput = () => AlertError.close()
+inputHeight.oninput = () => AlertError.close()
+
 
 function calculate() {
   let weight = Number(inputWeight.value)
